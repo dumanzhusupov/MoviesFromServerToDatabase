@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/babyBlue">
+
+    <EditText
+        android:layout_margin="12dp"
+        android:id="@+id/enterId"
+        android:layout_width="0dp"
+        android:inputType="number"
+        android:hint="Input id"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/load_button"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/blueGreen"
+        ></EditText>
+
+    <Button
+        android:id="@+id/load_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOAD"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enterId"
+        app:layout_constraintBottom_toBottomOf="@id/enterId"
+        android:backgroundTint="@color/navyBlue"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterId"
+        app:layout_constraintBottom_toTopOf="@id/title_text"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"></ImageView>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="Title: "
+        android:textSize="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/budget_text"></TextView>
+    <TextView
+        android:id="@+id/title_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/title_text"
+        app:layout_constraintTop_toTopOf="@id/title_text"
+        ></TextView>
+    <TextView
+        android:id="@+id/budget_text"
+        app:layout_constraintLeft_toLeftOf="@id/title_text"
+        app:layout_constraintBottom_toTopOf="@id/release_date_text"
+        android:text="Budget:"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></TextView>
+    <TextView
+        android:id="@+id/budget_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/budget_text"
+        app:layout_constraintTop_toTopOf="@id/budget_text"
+        ></TextView>
+    <TextView
+        android:id="@+id/release_date_text"
+        app:layout_constraintLeft_toLeftOf="@id/title_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Release date:"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        ></TextView>
+    <TextView
+        android:id="@+id/release_date_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/release_date_text"
+        app:layout_constraintTop_toTopOf="@id/release_date_text"
+        ></TextView>
+    <Button
+        android:id="@+id/go_movies_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIST"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/navyBlue"
+        android:textColor="@color/white"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
